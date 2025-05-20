@@ -11,7 +11,7 @@ function App() {
     <>
       <div>
       <Button size="lg" variant="primary" width="w-60">
-  Continue
+  Shop Collection
 </Button>
 </div>
     </>
