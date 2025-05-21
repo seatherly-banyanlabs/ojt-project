@@ -1,54 +1,136 @@
-# React + TypeScript + Vite
+# 🏋️ R & S Athletics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **R & S Athletics** project — a modern, responsive, and component-driven React application built with Vite and Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Project Overview
 
-## Expanding the ESLint configuration
+This project serves as the frontend for R & S Athletics, showcasing clean UI architecture and reusable components. The layout includes essential landing page sections and follows a clear Git workflow for collaborative development.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🔧 Built With
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+## ✨ Features
+
+### 🔹 Navigation (Header)
+- Responsive navigation bar with logo and menu links
+- Mobile-friendly hamburger menu
+- Styled with focus and hover states for accessibility
+
+### 🔹 Hero Section
+- Large hero headline with subtext
+- Primary and secondary call-to-action (CTA) buttons
+- Fully responsive and visually centered layout
+
+### 🔹 Features Section
+- Display of core product/service features
+- Responsive grid layout using reusable Card, Heading, and Paragraph components
+- Icons and descriptive text
+
+### 🔹 Footer
+- Brand logo and navigation links
+- Copyright
+- Responsive for desktop and mobile layouts
+
+---
+
+## ♻️ Reusable UI Components
+
+This project includes modular, styled UI components designed for reuse across the application:
+
+- **Button** – Primary and link variants with hover states
+- **Card** – Container with optional icons/images, hover effect
+- **Heading** – Customizable heading levels (H1–H4)
+- **Paragraph** – Supports body, small, and caption variants
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+├── assets/         # Images, icons, logos
+├── components/     # Reusable UI components
+│   └── ui/         # Button, Card, Heading, Paragraph
+├── sections/       # App sections (Hero, Features, Footer, Header)
+├── styles/         # Global Tailwind and CSS files
+│   ├── index.css
+│   └── tailwind.config.ts
+├── pages/          # App-level pages
+│   └── Home.tsx
+├── App.tsx         # Main App component
+├── main.tsx        # Vite entry point
+├── types/          # Shared TypeScript types
+└── utils/          # Helper functions (e.g., class merging)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/seatherly-banyanlabs/ojt-project
+cd rs-athletics
 ```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+
+```bash
+npm run dev
+```
+
+Navigate to: [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 🛠️ Scripts
+
+| Command           | Description                         |
+|------------------|-------------------------------------|
+| `npm run dev`     | Start local development server       |
+| `npm run build`   | Build the project for production     |
+| `npm run preview` | Preview the production build locally |
+
+---
+
+## 🌈 Git Flow Branching Convention
+
+This project uses **Git Flow** to maintain clean development and deployment workflows:
+
+- `main` – Stable, production-ready code  
+- `develop` – Integrates all ongoing features  
+- `release` – Final testing before production  
+- `feature/{name}` – Feature-specific branches (e.g., `feature/navbar`)  
+- `bugfix/{name}` – For fixing bugs  
+- `hotfix/{name}` – Urgent patches for production  
+
+---
+
+## 🧠 Best Practices
+
+- Use semantic HTML for accessibility and SEO  
+- Modularize reusable components  
+- Follow consistent naming conventions  
+- Write meaningful commit messages  
+- Maintain clean and DRY code  
+
+---
+
+## 📝 License
+
+This project is intended for **internal or educational use**. Redistribution is not permitted without express permission.
