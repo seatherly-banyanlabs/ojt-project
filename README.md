@@ -79,7 +79,7 @@ src/
 
 ```bash
 git clone https://github.com/seatherly-banyanlabs/ojt-project
-cd rs-athletics
+cd ojt-project
 ```
 
 ### 2. Install Dependencies
