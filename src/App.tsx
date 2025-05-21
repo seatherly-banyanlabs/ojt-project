@@ -1,10 +1,10 @@
+import Hero from "./components/Hero";
 
 export function App() {
   return (
-<div>  
-        </div>
-      
-  
+    <div>
+      <Hero />
+    </div>
   );
 }
 export default App;
