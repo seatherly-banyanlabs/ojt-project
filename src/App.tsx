@@ -1,5 +1,5 @@
-import Button from "./components/Button";
-import Paragraph from "./components/Paragraph";
+import Button from "./ui/Button";
+import Paragraph from "./ui/Paragraph";
 export function App() {
   return (
     <>
