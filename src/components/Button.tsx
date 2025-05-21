@@ -5,50 +5,52 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "link";
   size?: "sm" | "md" | "lg";
-  width?: string; // e.g. 'w-40', 'w-auto', etc.
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
   className?: string;
 };
 
-const baseStyles =
-  "rounded-lg font-medium text-[16px] font-['Inter'] transition-colors";
-
-const variantStyles = {
-  primary: "bg-[#0D9488] text-white hover:bg-[#0C827A]",
-  link: "bg-transparent text-[#0D9488] hover:text-[#0C827A] underline hover:no-underline",
+const sizeClasses = {
+  sm: "w-[120px] h-[40px] text-[16px]",
+  md: "w-[150px] h-[55px] text-[16px]",
+  lg: "w-[200px] h-[56px] text-[16px]",
 };
 
-const sizeStyles = {
-  sm: "px-4 py-3 text-sm", // taller, less wide
-  md: "px-5 py-3.5 text-base",
-  lg: "px-6 py-4 text-lg",
-};
-
-const Button: React.FC<ButtonProps> = ({
+export default function Button({
   children,
   variant = "primary",
   size = "md",
-  width = "w-auto",
   onClick,
   type = "button",
+  disabled = false,
   className,
-}) => {
+}: ButtonProps) {
+  const baseClasses =
+    "inline-flex items-center justify-center rounded-[6px] font-medium font-inter transition-colors duration-200 text-center";
+
+  const variantClasses =
+    variant === "primary"
+      ? "bg-[#0D9488] text-white hover:bg-[#0C827A]"
+      : "text-[#0D9488] underline hover:text-[#0C827A] bg-transparent";
+
+  const disabledClasses = disabled ? "opacity-50 cursor-not-allowed" : "";
+
   return (
     <button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       className={clsx(
-        baseStyles,
-        variantStyles[variant],
-        sizeStyles[size],
-        width,
+        baseClasses,
+        sizeClasses[size],
+        variantClasses,
+        disabledClasses,
         className
       )}
+      style={{ fontWeight: 500, fontFamily: "'Inter', sans-serif" }}
     >
       {children}
     </button>
   );
-};
-
-export default Button;
+}

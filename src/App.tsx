@@ -1,21 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Button from './components/Button'
-import './App.css'
+import Button from "./components/Button";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export function App() {
   return (
-    <>
-      <div>
-      <Button size="lg" variant="primary" width="w-60">
-  Shop Collection
-</Button>
-</div>
-    </>
-  )
+    <div className="flex items-center justify-center h-screen">
+      <Button size="md" variant="primary">
+        Shop Collection
+      </Button>
+    </div>
+  );
 }
-
-export default App
+export default App;
