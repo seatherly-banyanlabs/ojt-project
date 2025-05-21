@@ -48,7 +48,7 @@ export default function Button({
         disabledClasses,
         className
       )}
-      style={{ fontWeight: 500, fontFamily: "'Inter', sans-serif" }}
+      
     >
       {children}
     </button>
