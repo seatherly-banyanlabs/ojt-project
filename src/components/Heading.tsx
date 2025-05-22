@@ -15,9 +15,9 @@ const styles: Record<HeadingLevel, string> = {
   h4: "text-[20px] md:text-[18px] font-semibold leading-[1.4] text-[#1E293B]",
 };
 
-const Heading: React.FC<HeadingProps> = ({ level, children, className }) => {
+const Heading: React.FC<HeadingProps> = ({ level, children, className="" }) => {
   const Tag = level;
-  return <Tag className={`${styles[level]} ${className ?? ""}`}>{children}</Tag>;
+  return <Tag className={`${styles[level]} ${className}`}>{children}</Tag>;
 };
 
 export default Heading;
