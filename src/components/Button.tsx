@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 type ButtonProps = {
   children: React.ReactNode;
-  variant?: "primary" | "link";
+  variant?: "primary" | "link" | "secondary";
   size?: "sm" | "md" | "lg";
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
@@ -24,14 +24,16 @@ export default function Button({
   onClick,
   type = "button",
   disabled = false,
-  className,
+  className= "",
 }: ButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center rounded-[6px] font-medium font-inter transition-colors duration-200 text-center";
+    "inline-flex items-center justify-center rounded-[8px] font-medium font-inter transition-colors duration-200 text-center";
 
   const variantClasses =
     variant === "primary"
       ? "bg-[#0D9488] text-white hover:bg-[#0C827A]"
+      : variant === "secondary"
+      ? "bg-gray-200 text-[#0D9488] hover:bg-gray-300"
       : "text-[#0D9488] underline hover:text-[#0C827A] bg-transparent";
 
   const disabledClasses = disabled ? "opacity-50 cursor-not-allowed" : "";
@@ -48,7 +50,6 @@ export default function Button({
         disabledClasses,
         className
       )}
-      
     >
       {children}
     </button>

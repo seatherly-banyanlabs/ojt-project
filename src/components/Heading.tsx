@@ -5,6 +5,7 @@ type HeadingLevel = "h1" | "h2" | "h3" | "h4";
 interface HeadingProps {
   level: HeadingLevel;
   children: React.ReactNode;
+  className?: string; 
 }
 
 const styles: Record<HeadingLevel, string> = {
@@ -14,9 +15,9 @@ const styles: Record<HeadingLevel, string> = {
   h4: "text-[20px] md:text-[18px] font-semibold leading-[1.4] text-[#1E293B]",
 };
 
-const Heading: React.FC<HeadingProps> = ({ level, children }) => {
+const Heading: React.FC<HeadingProps> = ({ level, children, className="" }) => {
   const Tag = level;
-  return <Tag className={styles[level]}>{children}</Tag>;
+  return <Tag className={`${styles[level]} ${className}`}>{children}</Tag>;
 };
 
 export default Heading;
