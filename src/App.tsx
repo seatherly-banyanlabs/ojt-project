@@ -1,11 +1,5 @@
-import Hero from "./components/Hero";
+import FeatureSectionDemo from "./pages/FeatureSectionDemo";
 
-export function App() {
-  return (
-    <div>
-      <Hero />
-    </div>
-  );
+export default function App() {
+  return <FeatureSectionDemo />;
 }
-
-export default App;
