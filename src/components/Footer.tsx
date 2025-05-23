@@ -5,6 +5,7 @@ import Paragraph from "../components/Paragraph";
 interface FooterProps {
   logo: string;
   companyName: string;
+  links: { label: string; href: string }[];
 }
 
 const Footer: React.FC<FooterProps> = ({ logo, companyName }) => {
