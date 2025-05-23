@@ -1,10 +1,11 @@
 import React from 'react';
 
 interface CardProps {
-  title: string;
-  body: string;
+  title?: string;
+  body?: string;
   icon?: React.ReactNode;
   iconPosition?: 'top' | 'left';
+  children?: React.ReactNode;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -12,6 +13,7 @@ const Card: React.FC<CardProps> = ({
   body,
   icon,
   iconPosition = 'top',
+  children,
 }) => {
   const isLeft = icon && iconPosition === 'left';
 
@@ -27,8 +29,14 @@ const Card: React.FC<CardProps> = ({
       )}
 
       <div>
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-base font-normal text-gray-700">{body}</p>
+        {children ? (
+          children
+        ) : (
+          <>
+            {title && <h3 className="text-xl font-semibold mb-2">{title}</h3>}
+            {body && <p className="text-base font-normal text-gray-700">{body}</p>}
+          </>
+        )}
       </div>
     </div>
   );
