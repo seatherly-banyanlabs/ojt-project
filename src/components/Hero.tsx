@@ -4,7 +4,7 @@ import Button from "./Button";
 
 export default function Hero() {
   return (
-    <section className="w-full bg-white !px-8 !py-20 min-h-screen flex items-center justify-center">
+    <section className="w-full bg-white !px-8 !py-20 min-h-[80vh] flex items-center justify-center">
       <div className="max-w-7xl px-4 mx-4 w-full flex flex-col-reverse md:flex-row items-center justify-between gap-y-20 gap-x-16">
         
         {/* Left: Text Content */}
