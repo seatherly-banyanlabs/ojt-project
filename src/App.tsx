@@ -1,8 +1,8 @@
 
 import FeatureSection from "./components/FeatureSection";
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Hero from "./components/Hero"
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 const footerLinks = [
   { label: "About", href: "/about" },
@@ -17,14 +17,9 @@ function App() {
       <Header />
       <Hero />
       <FeatureSection />
-      <Footer
-        logo="ShoeStyle"
-        companyName="ShoeStyle"
-        links={footerLinks}
-      />
-
+      <Footer logo="ShoeStyle" companyName="ShoeStyle" links={footerLinks} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
