@@ -17,14 +17,9 @@ function App() {
       <Header />
       <Hero />
       <FeatureSection />
-      <Footer
-        logo="ShoeStyle"
-        companyName="ShoeStyle"
-        links={footerLinks}
-      />
-
+      <Footer logo="ShoeStyle" companyName="ShoeStyle" />
     </div>
-  )
+  );
 }
 
 export default App
